@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* smoot scroll*/
+html {
+    scroll-behavior: smooth;
+  }
+/*End smoot*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background-color:white;
+    color: black;
+}
+.container {
+    width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: sticky;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+/*Logo */
+.navbar .logo{
+    width: 18%;
+}
+.navbar .logo a{
+    text-decoration: none;
+    color:red;
+    font-size: 30px;
+}
+/*End of Logo*/
+៊៊/*li*/
+.navbar .Responsive-nav{
+    display: flex;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .Responsive-nav .nav-center{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    
+}
+.navbar .Responsive-nav .nav-center li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:red;
+    padding: 20px 20px;
+    font-size: 18px;
+    display: block;
+    
+}
+.navbar .Responsive-nav .nav-center li:hover a{
+    background-color: black;
+}
+/*end of li*/
+/* Search*/
+.navbar .Responsive-nav .nav-Rigth{
+    display: flex;
+    align-items: center;
+}
+.navbar .Responsive-nav .nav-Rigth .search-box{
+    display: flex;
+    border: 1px solid #333;
+}
+.navbar .Responsive-nav .nav-Rigth .search-box input{
+    width: 80%;
+    border: none;
+    outline: none;
+    padding: 10px 0px;
+    padding-left: 2%;
+
+}
+.navbar .Responsive-nav .nav-Rigth .search-box i{
+    width: 20%;
+    padding: 10px 0px;
+    border-left: 1px solid #3333;
+    text-align: center;
+    background-color: rgb(54, 231, 231);
+    color: azure;
+    cursor: pointer;
+    font-size: 20px;
+}
+.navbar .Responsive-nav .nav-Rigth .user{
+    font-size: 15px;
+    margin-left: 10px;
+}
+.navbar .hambugar{
+    padding: 8px 12px;
+    background-color: #333;
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+    animation: hambugar 1s linear infinite alternate;
+    display: none;
+}
+@keyframes hambugar{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.2);
+    }
+}
+@media (max-width:1280px){
+    .navbar .logo{
+        padding: 8px;
+    }
+    .navbar .hambugar{
+        display: block;
+    }
+    .navbar .Responsive-nav{
+        flex-direction: column;
+        position: fixed;
+        top: -65%;
+        background-color: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        left: 0;
+        transition: all 0.5s linear;
+    }
+    .navbar .Responsive-nav.active{
+        top: 9.5%;
+    }
+
+    .navbar .Responsive-nav .nav-center{
+        flex-direction: column;
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .navbar .Responsive-nav .nav-Rigth{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+  /*end of Search*/  
+/* Img Container */
+.img-container{
+    width: 100%;
+    height: 90.3vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/Ankor_Wat_temple.jpg);
+    display: block;
+}
+.img-container .modal{
+    display:flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.img-container .modal h1{
+    font-size:  3.5em;
+    text-shadow: 5px 5px 10px #333333;
+    margin-bottom: 5px;
+}
+.img-container .modal H2{
+    font-size: 2.5em;
+    margin-top: 3px;
+    text-shadow: 5px 5px 10px #333333;
+}
+.img-container .modal p{
+    font-size: 20px;
+    margin-top: 15px;
+    text-shadow: 5px 5px 10px #333333;
+}
+.img-container .modal a{
+    display: block;
+    text-decoration: none;
+    color: #333333;
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 1px solid #333333;
+    margin-top: 20px;
+    transition: all 0.3s linear;
+}
+.img-container .modal a:hover{
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #ffffff ;
+
+}
+/* End of Img Container */
+/*@media (max-width:1280px){
+    .capital .detail{
+        padding: 0 70px ;
+    }
+}*/
+/* tilte */
+.title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 15%;
+    justify-content: flex-end;
+}
+.title h1{
+    font-size: 3em;
+    color: #333333;
+}
+.title .line{
+    width: 230px;
+    height: 5px;
+    margin-top: 3px;
+    background-color:red ;
+}
+/* end of title */
+/* City Section */
+.city{
+    width: 100%;
+    max-width: 80%;
+    background-color:mintcream;
+    margin: auto;
+    height: 100vh;
+    border-bottom: 1px solid lightgray;
+}
+.city .detail1{
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 100px;
+    align-items: center;
+    grid-gap: 50px ;
+}
+.city .detail1 .contain-city{
+    width: 100%;
+    height: 80%;
+    background-color:#b8b8b8; 
+    border-radius:5px 10px ;
+    padding: 10px 20px;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px #333333;
+    transition: all 0.3s linear;
+}
+.city .detail1 .contain-city:hover{
+    box-shadow: 0px 2px 5px #504b4b;
+}
+.city .detail1 .contain-city img{
+    width: 80%;
+}
+
+/* province Section */
+.province{
+    width: 100%;
+    max-width: 80%;
+    background-color:mintcream;
+    margin: auto;
+    height: 100vh;
+    border-bottom: 1px solid lightgray;
+}
+.province .detail2{
+    width: 100%;
+    height: 85%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 90px;
+    align-items: center;
+    grid-gap: 50px ;
+}
+/* About Section */
+.about{
+    width: 80%;
+    max-width: 80%;
+    background-color:mintcream;
+    margin: auto;
+    height: 100vh;
+    border-bottom: 1px solid lightgray;
+}
+.about .detail3{
+    padding: 0px 100px;
+    width: 100%;
+    height: 85%;
+    display: grid;
+    align-items: center;
+    
+}
+.about .detail3 .desc{
+    margin-bottom: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px;
+    text-align: justify;
+    background-color: rgb(252, 235, 238);
+}
+/* End About Section */
+.province .detail2 .contain-province{
+    width: 100%;
+    height: 80%;
+    background-color:#b8b8b8; 
+    border-radius:5px 10px ;
+    padding: 10px 20px;
+    display:flex ;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 5px #333333;
+    transition: all 0.3s linear;
+}
+.province .detail2 .contain-province h2{
+    margin-bottom: 5px;
+    text-decoration: underline;
+    font-size: 1.5em;
+}
+.province .detail2 .contain-province p{
+    font-size: 12px;
+}
+.province .detail2 .contain-province:hover{
+    box-shadow: 0px 2px 5px #504b4b;
+}
+.province .detail2 .contain-province img{
+    width: 100%;
+}
+/* End of province Section */
+/* Contact */
+.contact{
+    width: 80%;
+    max-width: 80%;
+    background-color:mintcream;
+    margin: auto;
+    height: 100vh;
+    border-bottom: 1px solid lightgray;
+}
+.contact .detail4{
+    width: 100%;
+    height: 85%;
+
+}
+.contact .detail4 form{
+   display: flex; 
+   flex-direction: column;
+   width: 60%;
+   height: 100%;
+   justify-content: center;
+   margin: auto;
+}
+.contact .detail4 form input{
+    height: 50px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 10px;
+}
+.contact .detail4 form textarea{
+    margin-bottom: 15px;
+    font-size: 18px;
+    padding: 10px;
+}
+/* End of Contact */
+/* Footer */
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: #333333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer .social-icon i{
+    color: #333333;
+    background-color:#ffffff ;
+    font-size: 30px;
+    padding: 15px; 
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    transition: all 0.2s linear;
+
+}
+.footer .social-icon i:hover{
+    background-color: #b8b8b8;
+    color: #ffffff;
+}
+.footer .footer-Nav{
+    display: flex;  
+    list-style: none;
+}
+.footer .footer-Nav li a{
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    padding: 0px 10px;
+    font-weight: bold;
+}
+.footer .footer-Nav li:hover a{
+    text-decoration: underline;
+}
+/* Footer */
+/* capital */
+.capital {
+width: 100%;
+max-width: 80%;
+margin: auto;
+height: 130vh;
+background-color:mintcream;
+border-bottom: 1px solid lightgray;
+
+}
+.capital .detail{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 100px;
+}
+.capital .detail .description{
+    text-indent: 60px;
+    text-align: justify;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+}
+.capital .detail .detail-title {
+    font-size: 2em;
+    margin-top: 20px;
+}
+.capital .detail img{
+    width: 75%;
+    margin: auto;
+}
+.btn {
+    display: block;
+    width: 120px;
+    text-decoration: none;
+    padding: 15px 0;
+    text-align: center;
+    background-color: #333333;
+    color: #ffffff;
+    margin-bottom: 10px;
+    transition: all 0.2s linear;
+
+}
+.btn:hover{
+    opacity: 0.9;
+
+}
+
+/*end of capital */
+
